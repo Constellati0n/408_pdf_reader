@@ -5,10 +5,19 @@ import 'package:pdfrx/pdfrx.dart';
 
 /// Full text search bar driving a [PdfTextSearcher].
 class SearchBarView extends StatefulWidget {
-  const SearchBarView({super.key, required this.searcher, required this.onClose});
+  const SearchBarView({
+    super.key,
+    required this.searcher,
+    required this.onClose,
+    this.initialQuery = '',
+  });
 
   final PdfTextSearcher searcher;
   final VoidCallback onClose;
+
+  /// Text to show in the field when the bar opens, used to surface the snippet
+  /// a `zt408os://` deep link asked the reader to highlight.
+  final String initialQuery;
 
   @override
   State<SearchBarView> createState() => _SearchBarViewState();
@@ -23,6 +32,10 @@ class _SearchBarViewState extends State<SearchBarView> {
   void initState() {
     super.initState();
     widget.searcher.addListener(_onSearcherChanged);
+    if (widget.initialQuery.isNotEmpty) {
+      _controller.text = widget.initialQuery;
+      _query = widget.initialQuery;
+    }
   }
 
   @override

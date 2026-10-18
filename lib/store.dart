@@ -117,10 +117,43 @@ class AppStore extends ChangeNotifier {
     await _save();
   }
 
-  /// Which subject (hence which curated TOC) [path] is filed under.
+  /// Which subject [path] is filed under; either a 408os.cn book code or
+  /// [kSubjectNone] when the PDF has no counterpart on the website.
   String subjectOf(String path) {
     final int index = _shelf.indexWhere((ShelfBook b) => b.path == path);
     return index < 0 ? kSubjectNone : _shelf[index].subject;
+  }
+
+  /// The shelf book currently bound to a 408os.cn book code, if any.
+  ShelfBook? bookForCode(String code) {
+    if (code.isEmpty) return null;
+    for (final ShelfBook book in _shelf) {
+      if (book.subject == code) return book;
+    }
+    return null;
+  }
+
+  /// Permanently binds [path] to a website book code.
+  ///
+  /// A code resolves to a single local file, so any other book previously bound
+  /// to the same code is released first.
+  Future<void> bindBook(String path, String code) async {
+    final int index = _shelf.indexWhere((ShelfBook b) => b.path == path);
+    if (index < 0 || code.isEmpty) return;
+    bool changed = false;
+    for (int i = 0; i < _shelf.length; i++) {
+      if (i != index && _shelf[i].subject == code) {
+        _shelf[i] = _shelf[i].copyWith(subject: kSubjectNone);
+        changed = true;
+      }
+    }
+    if (_shelf[index].subject != code) {
+      _shelf[index] = _shelf[index].copyWith(subject: code);
+      changed = true;
+    }
+    if (!changed) return;
+    notifyListeners();
+    await _save();
   }
 
   /// Page offset currently stored for [path].

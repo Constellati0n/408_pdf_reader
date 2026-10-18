@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "comment": "408os.cn 教材代码表：code 为网站深链 zt408os://<code>?page= 中的书籍代码；toc 指向本应用内置的预提取目录文件（留空表示改用 PDF 自带书签目录）。",
+  "books": [
+    { "code": "26wdds", "name": "26 版王道数据结构", "toc": "ds" },
+    { "code": "26wdos", "name": "26 版王道操作系统", "toc": "os" },
+    { "code": "26wdco", "name": "26 版王道计算机组成原理", "toc": "coa" },
+    { "code": "26wdcn", "name": "26 版王道计算机网络", "toc": "network" },
+    { "code": "27wdds", "name": "27 版王道数据结构", "toc": "" },
+    { "code": "27wdos", "name": "27 版王道操作系统", "toc": "" },
+    { "code": "27wdco", "name": "27 版王道计算机组成原理", "toc": "" },
+    { "code": "27wdcn", "name": "27 版王道计算机网络", "toc": "" },
+    { "code": "4txdos", "name": "操作系统（第 4 版 汤小丹）", "toc": "" },
+    { "code": "mktxdos", "name": "操作系统（慕课版 汤小丹）", "toc": "" }
+  ]
+}

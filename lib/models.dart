@@ -20,7 +20,9 @@ class ShelfBook {
 
   final String title;
 
-  /// Which curated table of contents applies, see [kSubjects].
+  /// Textbook this PDF is filed under: a 408os.cn book code such as `26wdds`,
+  /// or [kSubjectNone] when the PDF has no counterpart on the website. The
+  /// code also selects the curated table of contents, see [TocRepository].
   final String subject;
 
   /// Added to the table of contents page numbers when jumping, to compensate
@@ -36,11 +38,17 @@ class ShelfBook {
   /// Milliseconds since epoch of the last time the book was opened.
   final int openedAt;
 
-  ShelfBook copyWith({int? page, int? totalPages, int? openedAt, int? pageOffset}) {
+  ShelfBook copyWith({
+    String? subject,
+    int? page,
+    int? totalPages,
+    int? openedAt,
+    int? pageOffset,
+  }) {
     return ShelfBook(
       path: path,
       title: title,
-      subject: subject,
+      subject: subject ?? this.subject,
       pageOffset: pageOffset ?? this.pageOffset,
       page: page ?? this.page,
       totalPages: totalPages ?? this.totalPages,

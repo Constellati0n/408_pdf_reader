@@ -34,7 +34,7 @@ class OutlineView extends StatefulWidget {
 class _OutlineViewState extends State<OutlineView> {
   Future<List<TocEntry>>? _future;
 
-  bool get _usesBuiltIn => widget.subject != kSubjectNone;
+  bool get _usesBuiltIn => TocRepository.hasCurated(widget.subject);
 
   @override
   void initState() {

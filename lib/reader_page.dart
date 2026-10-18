@@ -18,6 +18,7 @@ class ReaderPage extends StatefulWidget {
     this.initialPage = 1,
     this.subject = kSubjectNone,
     this.pageOffset = 0,
+    this.initialHighlight = '',
   });
 
   final String filePath;
@@ -29,6 +30,9 @@ class ReaderPage extends StatefulWidget {
 
   /// Correction added to the curated table of contents page numbers.
   final int pageOffset;
+
+  /// Snippet the website asked to highlight, forwarded by a `zt408os://` link.
+  final String initialHighlight;
 
   @override
   State<ReaderPage> createState() => _ReaderPageState();
@@ -43,6 +47,10 @@ class _ReaderPageState extends State<ReaderPage> {
   /// the controller's document, which is only available once the viewer is
   /// attached and the document loaded. Building it in [initState] throws.
   PdfTextSearcher? _searcher;
+
+  /// Set once the deep-link highlight has been located, so the search listener
+  /// stops after the first hit.
+  bool _highlightLocated = false;
 
   PdfDocument? _document;
   int _pageNumber = 1;
@@ -133,6 +141,34 @@ class _ReaderPageState extends State<ReaderPage> {
         totalPages: controller.pageCount,
       ),
     );
+    _startInitialHighlight();
+  }
+
+  /// Runs the snippet a `zt408os://` link carried, searching quietly in the
+  /// background. Scanned PDFs have no text layer, so finding nothing is an
+  /// expected outcome and simply leaves the requested page in place.
+  void _startInitialHighlight() {
+    final String text = widget.initialHighlight.trim();
+    if (text.isEmpty || _highlightLocated) return;
+    _searcher ??= PdfTextSearcher(_controller);
+    _searcher!.addListener(_onHighlightSearchTick);
+    _searcher!.startTextSearch(
+      RegExp(RegExp.escape(text), caseSensitive: false),
+      goToFirstMatch: false,
+      searchImmediately: true,
+    );
+    setState(() => _searchVisible = true);
+  }
+
+  void _onHighlightSearchTick() {
+    final PdfTextSearcher? searcher = _searcher;
+    if (searcher == null || _highlightLocated) return;
+    final ({int start, int end})? range =
+        searcher.getMatchesRangeForPage(widget.initialPage < 1 ? 1 : widget.initialPage);
+    if (range == null || range.end <= range.start) return;
+    _highlightLocated = true;
+    searcher.removeListener(_onHighlightSearchTick);
+    unawaited(searcher.goToMatchOfIndex(range.start));
   }
 
   void _onPageChanged(int? pageNumber) {
@@ -243,7 +279,11 @@ class _ReaderPageState extends State<ReaderPage> {
       body: Column(
         children: <Widget>[
           if (_searchVisible && searcher != null)
-            SearchBarView(searcher: searcher, onClose: _toggleSearch),
+            SearchBarView(
+              searcher: searcher,
+              onClose: _toggleSearch,
+              initialQuery: widget.initialHighlight.trim(),
+            ),
           Expanded(child: _buildViewer()),
           _buildBottomBar(context),
         ],

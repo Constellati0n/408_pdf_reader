@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
         allowedExtensions: <String>['pdf'],
       );
       if (picked == null || !mounted) return;
-      final String? subject = await _askSubject();
+      final String? subject = await _askBook();
       if (subject == null || !mounted) return;
       final String localPath = await PdfImporter.importPlatformFile(picked);
       if (!mounted) return;
@@ -53,21 +53,24 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-  /// Asks which of the curated subjects the book belongs to.
-  Future<String?> _askSubject() {
+  /// Asks which 408os.cn textbook this PDF is.
+  ///
+  /// The answer is the website's book code, so that a later "打开教材" jump can
+  /// find this file and land on the right page.
+  Future<String?> _askBook() {
     return showDialog<String>(
       context: context,
       builder: (BuildContext context) => SimpleDialog(
-        title: const Text('这本电子书是哪一科？'),
+        title: const Text('这本电子书是网站里的哪本教材？'),
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.fromLTRB(24, 0, 24, 8),
             child: Text(
-              '选择后会自动套用该科目的完整目录',
+              '绑定后，在 408os.cn 点「打开教材」即可直接跳到这本书的对应页码',
               style: Theme.of(context).textTheme.bodySmall,
             ),
           ),
-          ...kSubjects.map(
+          ...TocRepository.choices.map(
             (TocSubject subject) => SimpleDialogOption(
               onPressed: () => Navigator.of(context).pop(subject.id),
               child: Row(
@@ -110,8 +113,8 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Future<void> _changeSubject(ShelfBook book) async {
-    final String? subject = await _askSubject();
+  Future<void> _changeBook(ShelfBook book) async {
+    final String? subject = await _askBook();
     if (subject == null) return;
     await AppStore.instance.addBook(
       path: book.path,
@@ -241,20 +244,20 @@ class _HomePageState extends State<HomePage> {
     return ListTile(
       leading: const Icon(Icons.menu_book_outlined),
       title: Text(book.title, maxLines: 1, overflow: TextOverflow.ellipsis),
-      subtitle: Text('${subjectLabel(book.subject)} · $progress',
+      subtitle: Text('${TocRepository.labelFor(book.subject)} · $progress',
           maxLines: 1, overflow: TextOverflow.ellipsis),
       trailing: PopupMenuButton<String>(
         tooltip: '更多',
         onSelected: (String action) {
           switch (action) {
             case 'subject':
-              _changeSubject(book);
+              _changeBook(book);
             case 'remove':
               _confirmRemove(book);
           }
         },
         itemBuilder: (BuildContext context) => const <PopupMenuEntry<String>>[
-          PopupMenuItem<String>(value: 'subject', child: Text('更改科目')),
+          PopupMenuItem<String>(value: 'subject', child: Text('更改教材')),
           PopupMenuItem<String>(value: 'remove', child: Text('从书架移除')),
         ],
       ),
