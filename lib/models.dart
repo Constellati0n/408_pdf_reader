@@ -11,6 +11,7 @@ class ShelfBook {
     this.subject = kSubjectNone,
     this.pageOffset = 0,
     this.webOffset = 0,
+    this.webOffsetSet = false,
     this.page = 1,
     this.totalPages = 0,
     this.openedAt = 0,
@@ -37,6 +38,10 @@ class ShelfBook {
   /// the two need different corrections, so this is kept separate.
   final int webOffset;
 
+  /// Whether the user has adjusted [webOffset] at least once; used to stop
+  /// nagging with the jump banner on every deep link afterwards.
+  final bool webOffsetSet;
+
   /// Last read page (1-based).
   final int page;
 
@@ -53,6 +58,7 @@ class ShelfBook {
     int? openedAt,
     int? pageOffset,
     int? webOffset,
+    bool? webOffsetSet,
   }) {
     return ShelfBook(
       path: path,
@@ -60,6 +66,7 @@ class ShelfBook {
       subject: subject ?? this.subject,
       pageOffset: pageOffset ?? this.pageOffset,
       webOffset: webOffset ?? this.webOffset,
+      webOffsetSet: webOffsetSet ?? this.webOffsetSet,
       page: page ?? this.page,
       totalPages: totalPages ?? this.totalPages,
       openedAt: openedAt ?? this.openedAt,
@@ -72,6 +79,7 @@ class ShelfBook {
     'subject': subject,
     'pageOffset': pageOffset,
     'webOffset': webOffset,
+    'webOffsetSet': webOffsetSet,
     'page': page,
     'totalPages': totalPages,
     'openedAt': openedAt,
@@ -84,6 +92,7 @@ class ShelfBook {
       subject: json['subject'] as String? ?? kSubjectNone,
       pageOffset: (json['pageOffset'] as num?)?.toInt() ?? 0,
       webOffset: (json['webOffset'] as num?)?.toInt() ?? 0,
+      webOffsetSet: json['webOffsetSet'] as bool? ?? false,
       page: (json['page'] as num?)?.toInt() ?? 1,
       totalPages: (json['totalPages'] as num?)?.toInt() ?? 0,
       openedAt: (json['openedAt'] as num?)?.toInt() ?? 0,

@@ -154,8 +154,10 @@ class _ReaderPageState extends State<ReaderPage> {
 
   /// Tells the user which page the website asked for and where it landed, since
   /// the site quotes the textbook's printed page rather than the PDF's own, and
-  /// offers the stepper to correct it.
+  /// offers the stepper to correct it. Skipped once the user has adjusted the
+  /// web offset for this book, so everyday deep links stay quiet.
   void _announceWebJump() {
+    if (AppStore.instance.webOffsetSetOf(widget.filePath)) return;
     final int target = widget.initialPage;
     final String signed =
         _webOffset >= 0 ? '+ $_webOffset' : '- ${-_webOffset}';

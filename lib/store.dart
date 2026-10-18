@@ -98,6 +98,7 @@ class AppStore extends ChangeNotifier {
       subject: subject ?? previous?.subject ?? kSubjectNone,
       pageOffset: previous?.pageOffset ?? 0,
       webOffset: previous?.webOffset ?? 0,
+      webOffsetSet: previous?.webOffsetSet ?? false,
       page: previous?.page ?? 1,
       totalPages: totalPages > 0 ? totalPages : (previous?.totalPages ?? 0),
       openedAt: DateTime.now().millisecondsSinceEpoch,
@@ -169,12 +170,20 @@ class AppStore extends ChangeNotifier {
     return index < 0 ? 0 : _shelf[index].webOffset;
   }
 
+  /// Whether the user has corrected website page numbers for [path] before;
+  /// once true the deep-link banner no longer offers the stepper.
+  bool webOffsetSetOf(String path) {
+    final int index = _shelf.indexWhere((ShelfBook b) => b.path == path);
+    return index < 0 ? false : _shelf[index].webOffsetSet;
+  }
+
   /// Persists the offset added to website page numbers.
   Future<void> setWebOffset(String path, int offset) async {
     final int index = _shelf.indexWhere((ShelfBook b) => b.path == path);
     if (index < 0) return;
-    if (_shelf[index].webOffset == offset) return;
-    _shelf[index] = _shelf[index].copyWith(webOffset: offset);
+    final ShelfBook entry = _shelf[index];
+    if (entry.webOffset == offset && entry.webOffsetSet) return;
+    _shelf[index] = entry.copyWith(webOffset: offset, webOffsetSet: true);
     notifyListeners();
     await _save();
   }
