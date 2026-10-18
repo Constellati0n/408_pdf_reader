@@ -1,17 +1,109 @@
-# zt_pdf_reader
+# 408真题系统 · PDF 阅读器（Android）
 
-A new Flutter project.
+面向 408 考研复习的安卓版 PDF 阅读器，用 Flutter + [pdfrx](https://pub.dev/packages/pdfrx)（PDFium）实现，界面与交互对齐同名的 Windows 桌面版。
 
-## Getting Started
+**应用内不内置任何电子书**。PDF 由你自己添加；添加时选择所属科目，就会自动套用该科目的**完整目录**；如果这份文件的页码与目录对不上，用**页码偏移**一键校正。
 
-This project is a starting point for a Flutter application.
+> 本项目为个人学习用途的独立实现，与「王道」出版社及原桌面版作者无关。
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## 功能
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**阅读**
+- 连续滚动、双指缩放、上一页 / 下一页、按页码精确跳转
+- 全文搜索：命中高亮，支持上一个 / 下一个（注意：扫描版 PDF 无文字层，搜索不到内容，见下文）
+- 目录抽屉：章节树状列表，点击直达
+- 缩略图网格：三列预览，点击跳页
+- 夜间反色：整页颜色反转，适合暗光阅读
+- 深色模式：跟随系统 / 浅色 / 深色
+
+**书架（由你自建）**
+- 选择本地 PDF → 选择科目 → 入库到应用私有目录
+- 可随时**更改科目**、**从书架移除**（同时删除应用内的本地副本）
+- 记录每本书的最近阅读页码，下次打开自动回到原位
+
+**科目目录 + 页码偏移**
+- 内置四个科目的目录：数据结构 / 计算机组成原理 / 操作系统 / 计算机网络
+- 目录抽屉底部有 `−  偏移值  +` 步进器：**跳转页 = 目录页码 + 偏移**
+- 偏移按书保存，用于补偿不同印次 / 不同扫描件的页码差异
+- 科目选「其他」时不套用内置目录，改用 PDF 自带的书签目录（不需要偏移）
+
+**其它**
+- 支持从文件管理器 / 其它应用以「打开方式」唤起，也支持 `zt408os://` 自定义协议
+- 单文件 APK，无网络权限、无广告
+
+## 安装
+
+1. 到 [Releases](../../releases) 下载最新的 `408os-pdf-reader-Android-*.apk`
+2. 手机允许「安装未知来源应用」后安装
+
+> APK 使用 Android 调试密钥签名，仅供自用与测试；如需上架请自行配置正式签名。
+
+## 使用说明
+
+**第一次用（把目录用起来）**
+
+1. 点首页的「添加电子书到书架」，在系统文件选择器里选一个 PDF
+2. 弹出「这本电子书是哪一科？」——选对应科目（例如「数据结构」）
+3. 打开书 → 右上角「目录」图标 → 目录抽屉里就是这个科目的完整章节树，点任意条目直达
+
+**页码跳错了怎么办**
+
+内置目录的页码是按参考印次标定的。如果你手上的版本前置页数不同，跳转会偏：
+
+1. 打开目录抽屉，底部看到「页码偏移 / 目录页码 + 偏移 = 实际跳转页」
+2. 用 `−` / `+` 调整（点中间数值可一键归零）
+3. 比如目录写「第 1 章 绪论 第 13 页」但你的文件实际在第 15 页，就把偏移设为 `+2`
+4. 偏移会按书保存，下次不用再调
+
+## 关于内置目录数据
+
+配套的四本教材（王道 408 系列）是**扫描版 PDF，没有文字层**，因此：
+
+- 全文搜索在这些书上搜不到内容（这是 PDF 本身的属性，不是 App 的问题；要能搜需先做 OCR）
+- 但它们**保留了 PDF 内嵌书签**，所以目录数据是从书签树导出的，不是手打的
+
+导出结果打包在 [`assets/toc/`](assets/toc/)（四个 JSON，合计约 82 KB），页码对应该印次，配合上面的「页码偏移」可适配其它印次。
+
+## 从源码构建
+
+需要 Flutter 3.47+、JDK 17、Android SDK（platform 35/36、build-tools 36）。
+
+```bash
+flutter pub get
+flutter build apk --release
+# 产物：build/app/outputs/flutter-apk/app-release.apk
+```
+
+## 技术栈
+
+| 用途 | 依赖 |
+| --- | --- |
+| 框架 | Flutter 3.47.7 / Dart 3.13.5 |
+| PDF 渲染 | pdfrx 2.6.5（PDFium） |
+| 文件选择 | file_picker 13（Android SAF） |
+| 本地存储 | path_provider + shared_preferences |
+| 原生侧 | Kotlin（MainActivity：intent 桥接 + 缓存落地） |
+
+## 项目结构
+
+```
+lib/
+  main.dart              应用入口、主题、「打开方式」唤起
+  home_page.dart         书架首页：添加电子书、选科目、书架列表
+  reader_page.dart       阅读页：渲染、搜索、目录、缩略图、偏移
+  toc.dart               科目目录模型与资源加载
+  store.dart             设置与书架的持久化（history.json）
+  models.dart            ShelfBook（含 subject / pageOffset）
+  pdf_files.dart         导入与删除本地副本
+  platform_service.dart  与 Android 原生侧的通道
+  utils.dart             路径与文件名工具
+  widgets/               目录视图、缩略图视图、搜索栏、Logo
+assets/toc/              四个科目的目录数据（JSON）
+android/                 Android 工程（Manifest 意图过滤、MainActivity.kt）
+```
+
+## 许可
+
+仅供个人学习与研究使用。请自行准备 PDF 文件。
