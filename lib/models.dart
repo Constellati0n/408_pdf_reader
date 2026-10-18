@@ -10,6 +10,7 @@ class ShelfBook {
     required this.title,
     this.subject = kSubjectNone,
     this.pageOffset = 0,
+    this.webOffset = 0,
     this.page = 1,
     this.totalPages = 0,
     this.openedAt = 0,
@@ -29,6 +30,13 @@ class ShelfBook {
   /// for copies whose pagination differs from the reference printing.
   final int pageOffset;
 
+  /// Added to the page number 408os.cn sends when jumping into the book.
+  ///
+  /// The website quotes the textbook's *printed* page, while the table of
+  /// contents above uses PDF page numbers; for a copy with extra front matter
+  /// the two need different corrections, so this is kept separate.
+  final int webOffset;
+
   /// Last read page (1-based).
   final int page;
 
@@ -44,12 +52,14 @@ class ShelfBook {
     int? totalPages,
     int? openedAt,
     int? pageOffset,
+    int? webOffset,
   }) {
     return ShelfBook(
       path: path,
       title: title,
       subject: subject ?? this.subject,
       pageOffset: pageOffset ?? this.pageOffset,
+      webOffset: webOffset ?? this.webOffset,
       page: page ?? this.page,
       totalPages: totalPages ?? this.totalPages,
       openedAt: openedAt ?? this.openedAt,
@@ -61,6 +71,7 @@ class ShelfBook {
     'title': title,
     'subject': subject,
     'pageOffset': pageOffset,
+    'webOffset': webOffset,
     'page': page,
     'totalPages': totalPages,
     'openedAt': openedAt,
@@ -72,6 +83,7 @@ class ShelfBook {
       title: json['title'] as String? ?? 'PDF',
       subject: json['subject'] as String? ?? kSubjectNone,
       pageOffset: (json['pageOffset'] as num?)?.toInt() ?? 0,
+      webOffset: (json['webOffset'] as num?)?.toInt() ?? 0,
       page: (json['page'] as num?)?.toInt() ?? 1,
       totalPages: (json['totalPages'] as num?)?.toInt() ?? 0,
       openedAt: (json['openedAt'] as num?)?.toInt() ?? 0,

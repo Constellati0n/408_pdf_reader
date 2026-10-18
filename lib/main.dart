@@ -131,13 +131,13 @@ class _ZtPdfReaderAppState extends State<ZtPdfReaderApp> {
   /// Jumps to the page the website asked for, corrected by the offset the user
   /// set for this particular copy.
   void _openBoundBook(ShelfBook book, DeepLink link) {
-    final int page =
-        link.page > 1 ? link.page + book.pageOffset : book.page;
+    final bool hasPage = link.page > 1;
     _pushReader(
       book.path,
       book.title,
-      initialPage: page,
+      initialPage: hasPage ? link.page + book.webOffset : book.page,
       highlight: link.highlight,
+      webPage: hasPage ? link.page : 0,
     );
   }
 
@@ -157,11 +157,18 @@ class _ZtPdfReaderAppState extends State<ZtPdfReaderApp> {
     String title, {
     int initialPage = 1,
     String highlight = '',
+    int webPage = 0,
   }) {
     final NavigatorState? navigator = _navigatorKey.currentState;
     if (navigator == null) {
       WidgetsBinding.instance.addPostFrameCallback(
-        (_) => _pushReader(path, title, initialPage: initialPage, highlight: highlight),
+        (_) => _pushReader(
+          path,
+          title,
+          initialPage: initialPage,
+          highlight: highlight,
+          webPage: webPage,
+        ),
       );
       return;
     }
@@ -172,6 +179,7 @@ class _ZtPdfReaderAppState extends State<ZtPdfReaderApp> {
           title: title,
           initialPage: initialPage,
           initialHighlight: highlight,
+          webPage: webPage,
         ),
       ),
     );
@@ -217,7 +225,8 @@ class _BindBookDialog extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     '网站要打开《$name》第 ${link.page} 页。'
-                    '请选出你本地的这本书，之后会自动记住这个绑定。',
+                    '请选出你本地的这本书，之后会自动记住这个绑定；'
+                    '若页码对不上，可在阅读页「目录 → 网页跳转偏移」微调。',
                   ),
                   const SizedBox(height: 8),
                   ConstrainedBox(

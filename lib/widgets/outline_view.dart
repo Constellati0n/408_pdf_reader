@@ -8,14 +8,20 @@ import '../toc.dart';
 /// When [subject] has a curated table of contents shipped with the app, that
 /// one is used and its page numbers are corrected with [pageOffset]. Otherwise
 /// the PDF's own embedded outline is shown.
+///
+/// Books filed under a 408os.cn book code also get a second stepper: the page
+/// number the website sends is the textbook's *printed* page, so it needs its
+/// own correction ([webOffset]).
 class OutlineView extends StatefulWidget {
   const OutlineView({
     super.key,
     required this.subject,
     required this.document,
     required this.pageOffset,
+    required this.webOffset,
     required this.onOpenPage,
     required this.onOffsetChanged,
+    required this.onWebOffsetChanged,
   });
 
   final String subject;
@@ -24,8 +30,13 @@ class OutlineView extends StatefulWidget {
   final PdfDocument? document;
 
   final int pageOffset;
+
+  /// Correction applied to page numbers coming from 408os.cn.
+  final int webOffset;
+
   final void Function(int pageNumber) onOpenPage;
   final Future<void> Function(int offset) onOffsetChanged;
+  final Future<void> Function(int offset) onWebOffsetChanged;
 
   @override
   State<OutlineView> createState() => _OutlineViewState();
@@ -35,6 +46,9 @@ class _OutlineViewState extends State<OutlineView> {
   Future<List<TocEntry>>? _future;
 
   bool get _usesBuiltIn => TocRepository.hasCurated(widget.subject);
+
+  /// Only books the website knows about can be jumped into from a web page.
+  bool get _showsWebOffset => TocRepository.bookFor(widget.subject) != null;
 
   @override
   void initState() {
@@ -98,7 +112,22 @@ class _OutlineViewState extends State<OutlineView> {
             },
           ),
         ),
-        if (_usesBuiltIn) _buildOffsetBar(context),
+        if (_usesBuiltIn)
+          _offsetBar(
+            context,
+            title: '目录页码偏移',
+            hint: '目录页码 + 偏移 = 实际跳转页',
+            offset: widget.pageOffset,
+            onChanged: widget.onOffsetChanged,
+          ),
+        if (_showsWebOffset)
+          _offsetBar(
+            context,
+            title: '网页跳转偏移',
+            hint: '网站页码 + 偏移 = 实际跳转页',
+            offset: widget.webOffset,
+            onChanged: widget.onWebOffsetChanged,
+          ),
       ],
     );
   }
@@ -147,9 +176,14 @@ class _OutlineViewState extends State<OutlineView> {
 
   /// Stepper used to compensate for copies whose pagination differs from the
   /// reference printing the curated table of contents was built from.
-  Widget _buildOffsetBar(BuildContext context) {
+  Widget _offsetBar(
+    BuildContext context, {
+    required String title,
+    required String hint,
+    required int offset,
+    required Future<void> Function(int offset) onChanged,
+  }) {
     final ColorScheme scheme = Theme.of(context).colorScheme;
-    final int offset = widget.pageOffset;
     return Material(
       color: scheme.surfaceContainerHighest,
       child: Padding(
@@ -158,19 +192,19 @@ class _OutlineViewState extends State<OutlineView> {
           children: <Widget>[
             Expanded(
               child: Text(
-                '页码偏移\n目录页码 + 偏移 = 实际跳转页',
+                '$title\n$hint',
                 style: Theme.of(context).textTheme.labelSmall,
               ),
             ),
             IconButton(
               icon: const Icon(Icons.remove_circle_outline),
               tooltip: '偏移 -1',
-              onPressed: () => widget.onOffsetChanged(offset - 1),
+              onPressed: () => onChanged(offset - 1),
             ),
             Tooltip(
               message: '重置为 0',
               child: InkWell(
-                onTap: () => widget.onOffsetChanged(0),
+                onTap: () => onChanged(0),
                 child: SizedBox(
                   width: 46,
                   child: Text(
@@ -184,7 +218,7 @@ class _OutlineViewState extends State<OutlineView> {
             IconButton(
               icon: const Icon(Icons.add_circle_outline),
               tooltip: '偏移 +1',
-              onPressed: () => widget.onOffsetChanged(offset + 1),
+              onPressed: () => onChanged(offset + 1),
             ),
           ],
         ),

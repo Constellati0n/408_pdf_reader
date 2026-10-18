@@ -97,6 +97,7 @@ class AppStore extends ChangeNotifier {
       title: title,
       subject: subject ?? previous?.subject ?? kSubjectNone,
       pageOffset: previous?.pageOffset ?? 0,
+      webOffset: previous?.webOffset ?? 0,
       page: previous?.page ?? 1,
       totalPages: totalPages > 0 ? totalPages : (previous?.totalPages ?? 0),
       openedAt: DateTime.now().millisecondsSinceEpoch,
@@ -160,6 +161,22 @@ class AppStore extends ChangeNotifier {
   int pageOffsetOf(String path) {
     final int index = _shelf.indexWhere((ShelfBook b) => b.path == path);
     return index < 0 ? 0 : _shelf[index].pageOffset;
+  }
+
+  /// Correction applied to page numbers arriving from 408os.cn for [path].
+  int webOffsetOf(String path) {
+    final int index = _shelf.indexWhere((ShelfBook b) => b.path == path);
+    return index < 0 ? 0 : _shelf[index].webOffset;
+  }
+
+  /// Persists the offset added to website page numbers.
+  Future<void> setWebOffset(String path, int offset) async {
+    final int index = _shelf.indexWhere((ShelfBook b) => b.path == path);
+    if (index < 0) return;
+    if (_shelf[index].webOffset == offset) return;
+    _shelf[index] = _shelf[index].copyWith(webOffset: offset);
+    notifyListeners();
+    await _save();
   }
 
   /// Records the page the user reached in [path].

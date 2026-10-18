@@ -19,6 +19,7 @@ class ReaderPage extends StatefulWidget {
     this.subject = kSubjectNone,
     this.pageOffset = 0,
     this.initialHighlight = '',
+    this.webPage = 0,
   });
 
   final String filePath;
@@ -33,6 +34,10 @@ class ReaderPage extends StatefulWidget {
 
   /// Snippet the website asked to highlight, forwarded by a `zt408os://` link.
   final String initialHighlight;
+
+  /// Page the 408os.cn link quoted, before the web offset was applied. Zero
+  /// when the book was opened normally rather than through a jump link.
+  final int webPage;
 
   @override
   State<ReaderPage> createState() => _ReaderPageState();
@@ -57,6 +62,7 @@ class _ReaderPageState extends State<ReaderPage> {
   int _pageCount = 0;
   late String _subject;
   late int _pageOffset;
+  late int _webOffset;
   bool _searchVisible = false;
   Timer? _saveTimer;
 
@@ -72,6 +78,7 @@ class _ReaderPageState extends State<ReaderPage> {
     _pageOffset = widget.pageOffset != 0
         ? widget.pageOffset
         : AppStore.instance.pageOffsetOf(widget.filePath);
+    _webOffset = AppStore.instance.webOffsetOf(widget.filePath);
     // Built once on purpose: PdfViewerParams carries closures, and a new
     // instance on every rebuild would look "changed" to the viewer.
     _params = PdfViewerParams(
@@ -142,6 +149,29 @@ class _ReaderPageState extends State<ReaderPage> {
       ),
     );
     _startInitialHighlight();
+    if (widget.webPage > 0) _announceWebJump();
+  }
+
+  /// Tells the user which page the website asked for and where it landed, since
+  /// the site quotes the textbook's printed page rather than the PDF's own, and
+  /// offers the stepper to correct it.
+  void _announceWebJump() {
+    final int target = widget.initialPage;
+    final String signed =
+        _webOffset >= 0 ? '+ $_webOffset' : '- ${-_webOffset}';
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('网站第 ${widget.webPage} 页 $signed = 第 $target 页'),
+          action: SnackBarAction(
+            label: '调整网页偏移',
+            onPressed: () => _scaffoldKey.currentState?.openEndDrawer(),
+          ),
+          duration: const Duration(seconds: 6),
+        ),
+      );
+    });
   }
 
   /// Runs the snippet a `zt408os://` link carried, searching quietly in the
@@ -209,6 +239,12 @@ class _ReaderPageState extends State<ReaderPage> {
   Future<void> _changeOffset(int offset) async {
     setState(() => _pageOffset = offset);
     await AppStore.instance.setPageOffset(widget.filePath, offset);
+  }
+
+  /// Stores a new correction for pages arriving from 408os.cn.
+  Future<void> _changeWebOffset(int offset) async {
+    setState(() => _webOffset = offset);
+    await AppStore.instance.setWebOffset(widget.filePath, offset);
   }
 
   Future<void> _showJumpDialog() async {
@@ -383,11 +419,13 @@ class _ReaderPageState extends State<ReaderPage> {
                       subject: _subject,
                       document: _document,
                       pageOffset: _pageOffset,
+                      webOffset: _webOffset,
                       onOpenPage: (int pageNumber) {
                         _scaffoldKey.currentState?.closeEndDrawer();
                         unawaited(_goToPage(pageNumber));
                       },
                       onOffsetChanged: _changeOffset,
+                      onWebOffsetChanged: _changeWebOffset,
                     ),
                     ThumbnailsView(
                       document: _document,
