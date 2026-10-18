@@ -1,0 +1,1098 @@
+{
+ "subject": "coa",
+ "label": "计算机组成原理",
+ "book": "王道《计算机组成原理》",
+ "pageCount": 348,
+ "items": [
+  {
+   "title": "扉页",
+   "page": 1,
+   "children": []
+  },
+  {
+   "title": "版权页",
+   "page": 2,
+   "children": []
+  },
+  {
+   "title": "本书配套资源介绍",
+   "page": 3,
+   "children": []
+  },
+  {
+   "title": "前 言",
+   "page": 4,
+   "children": []
+  },
+  {
+   "title": "致 读 者",
+   "page": 5,
+   "children": []
+  },
+  {
+   "title": "王道训练营",
+   "page": 6,
+   "children": []
+  },
+  {
+   "title": "目 录",
+   "page": 8,
+   "children": []
+  },
+  {
+   "title": "第1章   计算机系统概述",
+   "page": 13,
+   "children": [
+    {
+     "title": "*1.1   计算机发展历程①",
+     "page": 13,
+     "children": [
+      {
+       "title": "*1.1.1   计算机硬件的发展",
+       "page": 13,
+       "children": []
+      },
+      {
+       "title": "*1.1.2   计算机软件的发展",
+       "page": 14,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "1.2   计算机系统层次结构",
+     "page": 14,
+     "children": [
+      {
+       "title": "1.2.1   计算机系统的组成",
+       "page": 14,
+       "children": []
+      },
+      {
+       "title": "1.2.2   计算机硬件",
+       "page": 15,
+       "children": []
+      },
+      {
+       "title": "1.2.3   计算机软件",
+       "page": 17,
+       "children": []
+      },
+      {
+       "title": "1.2.4   计算机系统的层次结构",
+       "page": 18,
+       "children": []
+      },
+      {
+       "title": "1.2.5   计算机系统的工作原理",
+       "page": 19,
+       "children": []
+      },
+      {
+       "title": "1.2.6   本节习题精选",
+       "page": 20,
+       "children": []
+      },
+      {
+       "title": "1.2.7   答案与解析",
+       "page": 22,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "1.3   计算机的性能指标",
+     "page": 24,
+     "children": [
+      {
+       "title": "1.3.1   计算机的主要性能指标",
+       "page": 24,
+       "children": []
+      },
+      {
+       "title": "1.3.2   几个专业术语",
+       "page": 27,
+       "children": []
+      },
+      {
+       "title": "1.3.3   本节习题精选",
+       "page": 27,
+       "children": []
+      },
+      {
+       "title": "1.3.4   答案与解析",
+       "page": 31,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "1.4   本章小结",
+     "page": 35,
+     "children": []
+    },
+    {
+     "title": "1.5   常见问题和易混淆知识点",
+     "page": 35,
+     "children": []
+    }
+   ]
+  },
+  {
+   "title": "第2章   数据的表示和运算",
+   "page": 37,
+   "children": [
+    {
+     "title": "2.1   数制与编码",
+     "page": 37,
+     "children": [
+      {
+       "title": "2.1.1   进位计数制及其相互转换",
+       "page": 37,
+       "children": []
+      },
+      {
+       "title": "2.1.2   定点数的编码表示",
+       "page": 40,
+       "children": []
+      },
+      {
+       "title": "2.1.3   整数的表示",
+       "page": 42,
+       "children": []
+      },
+      {
+       "title": "2.1.4   C语言中的整数类型及类型转换",
+       "page": 42,
+       "children": []
+      },
+      {
+       "title": "2.1.5   本节习题精选",
+       "page": 45,
+       "children": []
+      },
+      {
+       "title": "2.1.6   答案与解析",
+       "page": 47,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "2.2   运算方法和运算电路",
+     "page": 50,
+     "children": [
+      {
+       "title": "2.2.1   基本运算部件",
+       "page": 50,
+       "children": []
+      },
+      {
+       "title": "2.2.2   定点数的移位运算",
+       "page": 53,
+       "children": []
+      },
+      {
+       "title": "2.2.3   定点数的加减运算",
+       "page": 53,
+       "children": []
+      },
+      {
+       "title": "2.2.4   定点数的乘除运算",
+       "page": 56,
+       "children": []
+      },
+      {
+       "title": "2.2.5   本节习题精选",
+       "page": 59,
+       "children": []
+      },
+      {
+       "title": "2.2.6   答案与解析",
+       "page": 63,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "2.3   浮点数的表示与运算",
+     "page": 68,
+     "children": [
+      {
+       "title": "2.3.1   浮点数的表示",
+       "page": 68,
+       "children": []
+      },
+      {
+       "title": "2.3.2   浮点数的加减运算",
+       "page": 72,
+       "children": []
+      },
+      {
+       "title": "2.3.3   C语言中的浮点数类型",
+       "page": 73,
+       "children": []
+      },
+      {
+       "title": "2.3.4   数据的大小端和对齐存储",
+       "page": 74,
+       "children": []
+      },
+      {
+       "title": "2.3.5   本节习题精选",
+       "page": 75,
+       "children": []
+      },
+      {
+       "title": "2.3.6   答案与解析",
+       "page": 81,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "2.4   本章小结",
+     "page": 90,
+     "children": []
+    },
+    {
+     "title": "2.5   常见问题和易混淆知识点",
+     "page": 91,
+     "children": []
+    }
+   ]
+  },
+  {
+   "title": "第3章   存储系统",
+   "page": 92,
+   "children": [
+    {
+     "title": "3.1   存储器概述",
+     "page": 92,
+     "children": [
+      {
+       "title": "3.1.1   存储器的分类",
+       "page": 92,
+       "children": []
+      },
+      {
+       "title": "3.1.2   存储器的性能指标",
+       "page": 93,
+       "children": []
+      },
+      {
+       "title": "3.1.3   多级层次的存储系统",
+       "page": 94,
+       "children": []
+      },
+      {
+       "title": "3.1.4   本节习题精选",
+       "page": 95,
+       "children": []
+      },
+      {
+       "title": "3.1.5   答案与解析",
+       "page": 96,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "3.2   主存储器",
+     "page": 97,
+     "children": [
+      {
+       "title": "3.2.1   SRAM芯片和DRAM芯片",
+       "page": 97,
+       "children": []
+      },
+      {
+       "title": "3.2.2   只读存储器",
+       "page": 100,
+       "children": []
+      },
+      {
+       "title": "3.2.3   主存储器的基本组成",
+       "page": 101,
+       "children": []
+      },
+      {
+       "title": "3.2.4   多模块存储器",
+       "page": 101,
+       "children": []
+      },
+      {
+       "title": "3.2.5   本节习题精选",
+       "page": 103,
+       "children": []
+      },
+      {
+       "title": "3.2.6   答案与解析",
+       "page": 107,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "3.3   主存储器与CPU的连接",
+     "page": 113,
+     "children": [
+      {
+       "title": "3.3.1   连接原理",
+       "page": 113,
+       "children": []
+      },
+      {
+       "title": "3.3.2   主存容量的扩展",
+       "page": 113,
+       "children": []
+      },
+      {
+       "title": "3.3.3   存储芯片的地址分配和片选",
+       "page": 115,
+       "children": []
+      },
+      {
+       "title": "3.3.4   存储器与CPU的连接",
+       "page": 116,
+       "children": []
+      },
+      {
+       "title": "3.3.5   本节习题精选",
+       "page": 116,
+       "children": []
+      },
+      {
+       "title": "3.3.6   答案与解析",
+       "page": 118,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "3.4   外部存储器",
+     "page": 121,
+     "children": [
+      {
+       "title": "3.4.1   磁盘存储器",
+       "page": 121,
+       "children": []
+      },
+      {
+       "title": "3.4.2   固态硬盘",
+       "page": 123,
+       "children": []
+      },
+      {
+       "title": "3.4.3   本节习题精选",
+       "page": 124,
+       "children": []
+      },
+      {
+       "title": "3.4.4   答案与解析",
+       "page": 125,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "3.5   高速缓冲存储器",
+     "page": 127,
+     "children": [
+      {
+       "title": "3.5.1   程序访问的局部性原理",
+       "page": 127,
+       "children": []
+      },
+      {
+       "title": "3.5.2   Cache的基本工作原理",
+       "page": 129,
+       "children": []
+      },
+      {
+       "title": "3.5.3   Cache和主存的映射方式",
+       "page": 130,
+       "children": []
+      },
+      {
+       "title": "3.5.4   Cache中主存块的替换算法",
+       "page": 134,
+       "children": []
+      },
+      {
+       "title": "3.5.5   Cache的一致性问题",
+       "page": 135,
+       "children": []
+      },
+      {
+       "title": "3.5.6   本节习题精选",
+       "page": 136,
+       "children": []
+      },
+      {
+       "title": "3.5.7   答案与解析",
+       "page": 142,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "3.6   虚拟存储器",
+     "page": 149,
+     "children": [
+      {
+       "title": "3.6.1   虚拟存储器的基本概念",
+       "page": 149,
+       "children": []
+      },
+      {
+       "title": "3.6.2   页式虚拟存储器",
+       "page": 150,
+       "children": []
+      },
+      {
+       "title": "3.6.3   段式虚拟存储器",
+       "page": 153,
+       "children": []
+      },
+      {
+       "title": "3.6.4   段页式虚拟存储器",
+       "page": 154,
+       "children": []
+      },
+      {
+       "title": "3.6.5   虚拟存储器与Cache的比较",
+       "page": 154,
+       "children": []
+      },
+      {
+       "title": "3.6.6   本节习题精选",
+       "page": 154,
+       "children": []
+      },
+      {
+       "title": "3.6.7   答案与解析",
+       "page": 160,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "3.7   本章小结",
+     "page": 166,
+     "children": []
+    },
+    {
+     "title": "3.8   常见问题和易混淆知识点",
+     "page": 167,
+     "children": []
+    }
+   ]
+  },
+  {
+   "title": "第4章   指令系统",
+   "page": 168,
+   "children": [
+    {
+     "title": "4.1   指令系统",
+     "page": 168,
+     "children": [
+      {
+       "title": "4.1.1   指令集体系结构",
+       "page": 168,
+       "children": []
+      },
+      {
+       "title": "4.1.2   指令的基本格式",
+       "page": 169,
+       "children": []
+      },
+      {
+       "title": "4.1.3   定长操作码指令格式",
+       "page": 170,
+       "children": []
+      },
+      {
+       "title": "4.1.4   扩展操作码指令格式",
+       "page": 171,
+       "children": []
+      },
+      {
+       "title": "4.1.5   指令的操作类型",
+       "page": 171,
+       "children": []
+      },
+      {
+       "title": "4.1.6   本节习题精选",
+       "page": 172,
+       "children": []
+      },
+      {
+       "title": "4.1.7   答案与解析",
+       "page": 174,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "4.2   指令的寻址方式",
+     "page": 177,
+     "children": [
+      {
+       "title": "4.2.1   指令寻址和数据寻址",
+       "page": 177,
+       "children": []
+      },
+      {
+       "title": "4.2.2   常见的数据寻址方式",
+       "page": 178,
+       "children": []
+      },
+      {
+       "title": "4.2.3   本节习题精选",
+       "page": 181,
+       "children": []
+      },
+      {
+       "title": "4.2.4   答案与解析",
+       "page": 189,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "4.3   程序的机器级代码表示",
+     "page": 195,
+     "children": [
+      {
+       "title": "4.3.1   常用汇编指令介绍",
+       "page": 195,
+       "children": []
+      },
+      {
+       "title": "4.3.2   选择语句的机器级表示",
+       "page": 200,
+       "children": []
+      },
+      {
+       "title": "4.3.3   循环语句的机器级表示",
+       "page": 201,
+       "children": []
+      },
+      {
+       "title": "4.3.4   过程调用的机器级表示",
+       "page": 203,
+       "children": []
+      },
+      {
+       "title": "4.3.5   本节习题精选",
+       "page": 205,
+       "children": []
+      },
+      {
+       "title": "4.3.6   答案与解析",
+       "page": 210,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "4.4   CISC和RISC的基本概念",
+     "page": 213,
+     "children": [
+      {
+       "title": "4.4.1   复杂指令系统计算机（CISC）",
+       "page": 214,
+       "children": []
+      },
+      {
+       "title": "4.4.2   精简指令系统计算机（RISC）",
+       "page": 214,
+       "children": []
+      },
+      {
+       "title": "4.4.3   CISC和RISC的比较",
+       "page": 214,
+       "children": []
+      },
+      {
+       "title": "4.4.4   本节习题精选",
+       "page": 215,
+       "children": []
+      },
+      {
+       "title": "4.4.5   答案与解析",
+       "page": 216,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "4.5   本章小结",
+     "page": 216,
+     "children": []
+    },
+    {
+     "title": "4.6   常见问题和易混淆知识点",
+     "page": 217,
+     "children": []
+    }
+   ]
+  },
+  {
+   "title": "第5章   中央处理器",
+   "page": 218,
+   "children": [
+    {
+     "title": "5.1   CPU的功能和基本结构",
+     "page": 218,
+     "children": [
+      {
+       "title": "5.1.1   CPU的功能",
+       "page": 218,
+       "children": []
+      },
+      {
+       "title": "5.1.2   CPU的基本结构",
+       "page": 219,
+       "children": []
+      },
+      {
+       "title": "5.1.3   CPU的寄存器",
+       "page": 219,
+       "children": []
+      },
+      {
+       "title": "5.1.4   本节习题精选",
+       "page": 220,
+       "children": []
+      },
+      {
+       "title": "5.1.5   答案与解析",
+       "page": 222,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "5.2   指令执行过程",
+     "page": 225,
+     "children": [
+      {
+       "title": "5.2.1   指令周期",
+       "page": 225,
+       "children": []
+      },
+      {
+       "title": "5.2.2   指令周期的数据流",
+       "page": 226,
+       "children": []
+      },
+      {
+       "title": "5.2.3   指令执行方案",
+       "page": 227,
+       "children": []
+      },
+      {
+       "title": "5.2.4   本节习题精选",
+       "page": 228,
+       "children": []
+      },
+      {
+       "title": "5.2.5   答案与解析",
+       "page": 229,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "5.3   数据通路的功能和基本结构",
+     "page": 231,
+     "children": [
+      {
+       "title": "5.3.1   数据通路的功能",
+       "page": 231,
+       "children": []
+      },
+      {
+       "title": "5.3.2   数据通路的组成",
+       "page": 231,
+       "children": []
+      },
+      {
+       "title": "5.3.3   数据通路的基本结构",
+       "page": 232,
+       "children": []
+      },
+      {
+       "title": "5.3.4   数据通路的操作举例",
+       "page": 233,
+       "children": []
+      },
+      {
+       "title": "5.3.5   本节习题精选",
+       "page": 234,
+       "children": []
+      },
+      {
+       "title": "5.3.6   答案与解析",
+       "page": 241,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "5.4   控制器的功能和工作原理",
+     "page": 247,
+     "children": [
+      {
+       "title": "5.4.1   控制器的结构和功能",
+       "page": 247,
+       "children": []
+      },
+      {
+       "title": "5.4.2   硬布线控制器",
+       "page": 248,
+       "children": []
+      },
+      {
+       "title": "5.4.3   微程序控制器",
+       "page": 248,
+       "children": []
+      },
+      {
+       "title": "5.4.4   本节习题精选",
+       "page": 253,
+       "children": []
+      },
+      {
+       "title": "5.4.5   答案与解析",
+       "page": 257,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "5.5   异常和中断机制",
+     "page": 261,
+     "children": [
+      {
+       "title": "5.5.1   异常和中断的基本概念",
+       "page": 261,
+       "children": []
+      },
+      {
+       "title": "5.5.2   异常和中断的分类",
+       "page": 261,
+       "children": []
+      },
+      {
+       "title": "5.5.3   异常和中断响应过程",
+       "page": 262,
+       "children": []
+      },
+      {
+       "title": "5.5.4   本节习题精选",
+       "page": 263,
+       "children": []
+      },
+      {
+       "title": "5.5.5   答案与解析",
+       "page": 264,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "5.6   指令流水线",
+     "page": 266,
+     "children": [
+      {
+       "title": "5.6.1   指令流水线的基本概念",
+       "page": 266,
+       "children": []
+      },
+      {
+       "title": "5.6.2   流水线的基本实现",
+       "page": 267,
+       "children": []
+      },
+      {
+       "title": "5.6.3   流水线的冒险与处理",
+       "page": 268,
+       "children": []
+      },
+      {
+       "title": "5.6.4   流水线的性能指标",
+       "page": 271,
+       "children": []
+      },
+      {
+       "title": "5.6.5   高级流水线技术",
+       "page": 272,
+       "children": []
+      },
+      {
+       "title": "5.6.6   本节习题精选",
+       "page": 273,
+       "children": []
+      },
+      {
+       "title": "5.6.7   答案与解析",
+       "page": 279,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "5.7   多处理器的基本概念",
+     "page": 286,
+     "children": [
+      {
+       "title": "5.7.1   SISD、SIMD、MIMD的基本概念",
+       "page": 286,
+       "children": []
+      },
+      {
+       "title": "5.7.2   硬件多线程的基本概念",
+       "page": 287,
+       "children": []
+      },
+      {
+       "title": "5.7.3   多核处理器的基本概念",
+       "page": 288,
+       "children": []
+      },
+      {
+       "title": "5.7.4   共享内存多处理器的基本概念",
+       "page": 288,
+       "children": []
+      },
+      {
+       "title": "5.7.5   本节习题精选",
+       "page": 289,
+       "children": []
+      },
+      {
+       "title": "5.7.6   答案与解析",
+       "page": 290,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "5.8   本章小结",
+     "page": 291,
+     "children": []
+    },
+    {
+     "title": "5.9   常见问题和易混淆知识点",
+     "page": 292,
+     "children": []
+    }
+   ]
+  },
+  {
+   "title": "第6章   总线",
+   "page": 293,
+   "children": [
+    {
+     "title": "6.1   总线概述",
+     "page": 293,
+     "children": [
+      {
+       "title": "6.1.1   总线基本概念",
+       "page": 293,
+       "children": []
+      },
+      {
+       "title": "6.1.2   总线的分类",
+       "page": 294,
+       "children": []
+      },
+      {
+       "title": "6.1.3   系统总线的结构",
+       "page": 294,
+       "children": []
+      },
+      {
+       "title": "*6.1.4   常见的总线标准",
+       "page": 295,
+       "children": []
+      },
+      {
+       "title": "6.1.5   总线的性能指标",
+       "page": 296,
+       "children": []
+      },
+      {
+       "title": "6.1.6   本节习题精选",
+       "page": 297,
+       "children": []
+      },
+      {
+       "title": "6.1.7   答案与解析",
+       "page": 300,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "6.2   总线事务和定时",
+     "page": 303,
+     "children": [
+      {
+       "title": "6.2.1   总线事务",
+       "page": 303,
+       "children": []
+      },
+      {
+       "title": "6.2.2   总线定时",
+       "page": 303,
+       "children": []
+      },
+      {
+       "title": "6.2.3   本节习题精选",
+       "page": 305,
+       "children": []
+      },
+      {
+       "title": "6.2.4   答案与解析",
+       "page": 307,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "6.3   本章小结",
+     "page": 309,
+     "children": []
+    },
+    {
+     "title": "6.4   常见问题和易混淆知识点",
+     "page": 309,
+     "children": []
+    }
+   ]
+  },
+  {
+   "title": "第7章   输入/输出系统",
+   "page": 310,
+   "children": [
+    {
+     "title": "*7.1   I/O系统基本概念",
+     "page": 310,
+     "children": [
+      {
+       "title": "*7.1.1   输入/输出系统",
+       "page": 310,
+       "children": []
+      },
+      {
+       "title": "*7.1.2   外部设备",
+       "page": 311,
+       "children": []
+      },
+      {
+       "title": "*7.1.3   I/O控制方式",
+       "page": 312,
+       "children": []
+      },
+      {
+       "title": "*7.1.4   本节习题精选",
+       "page": 312,
+       "children": []
+      },
+      {
+       "title": "*7.1.5   答案与解析",
+       "page": 313,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "7.2   I/O接口",
+     "page": 313,
+     "children": [
+      {
+       "title": "7.2.1   I/O接口的功能",
+       "page": 313,
+       "children": []
+      },
+      {
+       "title": "7.2.2   I/O接口的基本结构",
+       "page": 313,
+       "children": []
+      },
+      {
+       "title": "7.2.3   I/O接口的类型",
+       "page": 314,
+       "children": []
+      },
+      {
+       "title": "7.2.4   I/O端口及其编址",
+       "page": 314,
+       "children": []
+      },
+      {
+       "title": "7.2.5   本节习题精选",
+       "page": 315,
+       "children": []
+      },
+      {
+       "title": "7.2.6   答案与解析",
+       "page": 317,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "7.3   I/O方式",
+     "page": 318,
+     "children": [
+      {
+       "title": "7.3.1   程序查询方式",
+       "page": 319,
+       "children": []
+      },
+      {
+       "title": "7.3.2   程序中断方式",
+       "page": 320,
+       "children": []
+      },
+      {
+       "title": "7.3.3   DMA方式",
+       "page": 325,
+       "children": []
+      },
+      {
+       "title": "7.3.4   本节习题精选",
+       "page": 329,
+       "children": []
+      },
+      {
+       "title": "7.3.5   答案与解析",
+       "page": 337,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "7.4   本章小结",
+     "page": 346,
+     "children": []
+    },
+    {
+     "title": "7.5   常见问题和易混淆知识点",
+     "page": 347,
+     "children": []
+    }
+   ]
+  },
+  {
+   "title": "参考文献",
+   "page": 348,
+   "children": []
+  }
+ ]
+}

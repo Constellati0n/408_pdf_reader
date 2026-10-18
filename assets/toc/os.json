@@ -1,0 +1,824 @@
+{
+ "subject": "os",
+ "label": "操作系统",
+ "book": "王道《操作系统》",
+ "pageCount": 371,
+ "items": [
+  {
+   "title": "扉页",
+   "page": 1,
+   "children": []
+  },
+  {
+   "title": "版权页",
+   "page": 2,
+   "children": []
+  },
+  {
+   "title": "本书配套资源介绍",
+   "page": 3,
+   "children": []
+  },
+  {
+   "title": "前 言",
+   "page": 4,
+   "children": []
+  },
+  {
+   "title": "致 读 者",
+   "page": 5,
+   "children": []
+  },
+  {
+   "title": "王道训练营",
+   "page": 6,
+   "children": []
+  },
+  {
+   "title": "目 录",
+   "page": 8,
+   "children": []
+  },
+  {
+   "title": "第1章   计算机系统概述",
+   "page": 12,
+   "children": [
+    {
+     "title": "1.1   操作系统的基本概念",
+     "page": 12,
+     "children": [
+      {
+       "title": "1.1.1   操作系统的概念",
+       "page": 12,
+       "children": []
+      },
+      {
+       "title": "1.1.2   操作系统的功能和目标",
+       "page": 13,
+       "children": []
+      },
+      {
+       "title": "1.1.3   操作系统的特征",
+       "page": 14,
+       "children": []
+      },
+      {
+       "title": "1.1.4   本节习题精选",
+       "page": 16,
+       "children": []
+      },
+      {
+       "title": "1.1.5   答案与解析",
+       "page": 17,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "1.2   操作系统发展历程",
+     "page": 18,
+     "children": [
+      {
+       "title": "1.2.1   手工操作阶段（此阶段无操作系统）",
+       "page": 18,
+       "children": []
+      },
+      {
+       "title": "1.2.2   批处理阶段（操作系统开始出现）",
+       "page": 18,
+       "children": []
+      },
+      {
+       "title": "1.2.3   分时操作系统",
+       "page": 19,
+       "children": []
+      },
+      {
+       "title": "1.2.4   实时操作系统",
+       "page": 20,
+       "children": []
+      },
+      {
+       "title": "1.2.5   网络操作系统和分布式计算机系统",
+       "page": 20,
+       "children": []
+      },
+      {
+       "title": "1.2.6   个人计算机操作系统",
+       "page": 20,
+       "children": []
+      },
+      {
+       "title": "1.2.7   本节习题精选",
+       "page": 21,
+       "children": []
+      },
+      {
+       "title": "1.2.8   答案与解析",
+       "page": 23,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "1.3   操作系统的运行环境",
+     "page": 26,
+     "children": [
+      {
+       "title": "1.3.1   处理器运行模式",
+       "page": 26,
+       "children": []
+      },
+      {
+       "title": "1.3.2   中断和异常的概念",
+       "page": 27,
+       "children": []
+      },
+      {
+       "title": "1.3.3   系统调用",
+       "page": 29,
+       "children": []
+      },
+      {
+       "title": "1.3.4   本节习题精选",
+       "page": 30,
+       "children": []
+      },
+      {
+       "title": "1.3.5   答案与解析",
+       "page": 33,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "1.4   操作系统结构",
+     "page": 37,
+     "children": []
+    },
+    {
+     "title": "1.5   操作系统引导",
+     "page": 40,
+     "children": []
+    },
+    {
+     "title": "1.6   虚拟机",
+     "page": 41,
+     "children": [
+      {
+       "title": "1.6.1   虚拟机的基本概念",
+       "page": 41,
+       "children": []
+      },
+      {
+       "title": "1.6.2   本节习题精选",
+       "page": 42,
+       "children": []
+      },
+      {
+       "title": "1.6.3   答案与解析",
+       "page": 44,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "1.7   本章疑难点",
+     "page": 46,
+     "children": []
+    }
+   ]
+  },
+  {
+   "title": "第2章   进程与线程",
+   "page": 48,
+   "children": [
+    {
+     "title": "2.1   进程与线程",
+     "page": 48,
+     "children": [
+      {
+       "title": "2.1.1   进程的概念和特征",
+       "page": 49,
+       "children": []
+      },
+      {
+       "title": "2.1.2   进程的组成",
+       "page": 49,
+       "children": []
+      },
+      {
+       "title": "2.1.3   进程的状态与转换",
+       "page": 51,
+       "children": []
+      },
+      {
+       "title": "2.1.4   进程控制",
+       "page": 52,
+       "children": []
+      },
+      {
+       "title": "2.1.5   进程的通信",
+       "page": 53,
+       "children": []
+      },
+      {
+       "title": "2.1.6   线程和多线程模型",
+       "page": 55,
+       "children": []
+      },
+      {
+       "title": "2.1.7   本节小结",
+       "page": 59,
+       "children": []
+      },
+      {
+       "title": "2.1.8   本节习题精选",
+       "page": 60,
+       "children": []
+      },
+      {
+       "title": "2.1.9   答案与解析",
+       "page": 68,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "2.2   CPU调度",
+     "page": 77,
+     "children": [
+      {
+       "title": "2.2.1   调度的概念",
+       "page": 77,
+       "children": []
+      },
+      {
+       "title": "2.2.2   调度的实现",
+       "page": 78,
+       "children": []
+      },
+      {
+       "title": "2.2.3   调度的目标",
+       "page": 80,
+       "children": []
+      },
+      {
+       "title": "2.2.4   进程切换",
+       "page": 81,
+       "children": []
+      },
+      {
+       "title": "2.2.5   CPU调度算法",
+       "page": 82,
+       "children": []
+      },
+      {
+       "title": "2.2.6   多处理机调度",
+       "page": 87,
+       "children": []
+      },
+      {
+       "title": "2.2.7   本节小结",
+       "page": 88,
+       "children": []
+      },
+      {
+       "title": "2.2.8   本节习题精选",
+       "page": 88,
+       "children": []
+      },
+      {
+       "title": "2.2.9   答案与解析",
+       "page": 96,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "2.3   同步与互斥",
+     "page": 108,
+     "children": [
+      {
+       "title": "2.3.1   同步与互斥的基本概念",
+       "page": 109,
+       "children": []
+      },
+      {
+       "title": "2.3.2   实现临界区互斥的基本方法",
+       "page": 110,
+       "children": []
+      },
+      {
+       "title": "2.3.3   互斥锁",
+       "page": 113,
+       "children": []
+      },
+      {
+       "title": "2.3.4   信号量",
+       "page": 113,
+       "children": []
+      },
+      {
+       "title": "2.3.5   经典同步问题",
+       "page": 117,
+       "children": []
+      },
+      {
+       "title": "2.3.6   管程",
+       "page": 123,
+       "children": []
+      },
+      {
+       "title": "2.3.7   本节小结",
+       "page": 124,
+       "children": []
+      },
+      {
+       "title": "2.3.8   本节习题精选",
+       "page": 125,
+       "children": []
+      },
+      {
+       "title": "2.3.9   答案与解析",
+       "page": 137,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "2.4   死锁",
+     "page": 160,
+     "children": [
+      {
+       "title": "2.4.1   死锁的概念",
+       "page": 160,
+       "children": []
+      },
+      {
+       "title": "2.4.2   死锁预防",
+       "page": 163,
+       "children": []
+      },
+      {
+       "title": "2.4.3   死锁避免",
+       "page": 163,
+       "children": []
+      },
+      {
+       "title": "2.4.4   死锁检测和解除",
+       "page": 168,
+       "children": []
+      },
+      {
+       "title": "2.4.5   本节小结",
+       "page": 169,
+       "children": []
+      },
+      {
+       "title": "2.4.6   本节习题精选",
+       "page": 169,
+       "children": []
+      },
+      {
+       "title": "2.4.7   答案与解析",
+       "page": 176,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "2.5   本章疑难点",
+     "page": 187,
+     "children": []
+    }
+   ]
+  },
+  {
+   "title": "第3章   内存管理",
+   "page": 188,
+   "children": [
+    {
+     "title": "3.1   内存管理概念",
+     "page": 188,
+     "children": [
+      {
+       "title": "3.1.1   内存管理的基本原理和要求",
+       "page": 188,
+       "children": []
+      },
+      {
+       "title": "3.1.2   连续分配管理方式",
+       "page": 192,
+       "children": []
+      },
+      {
+       "title": "3.1.3   基本分页存储管理",
+       "page": 195,
+       "children": []
+      },
+      {
+       "title": "3.1.4   基本分段存储管理",
+       "page": 199,
+       "children": []
+      },
+      {
+       "title": "3.1.5   段页式存储管理",
+       "page": 202,
+       "children": []
+      },
+      {
+       "title": "3.1.6   本节小结",
+       "page": 203,
+       "children": []
+      },
+      {
+       "title": "3.1.7   本节习题精选",
+       "page": 203,
+       "children": []
+      },
+      {
+       "title": "3.1.8   答案与解析",
+       "page": 213,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "3.2   虚拟内存管理",
+     "page": 224,
+     "children": [
+      {
+       "title": "3.2.1   虚拟内存的基本概念",
+       "page": 224,
+       "children": []
+      },
+      {
+       "title": "3.2.2   请求分页管理方式",
+       "page": 226,
+       "children": []
+      },
+      {
+       "title": "3.2.3   页框分配",
+       "page": 227,
+       "children": []
+      },
+      {
+       "title": "3.2.4   页面置换算法",
+       "page": 229,
+       "children": []
+      },
+      {
+       "title": "*3.2.5   抖动和工作集①",
+       "page": 233,
+       "children": []
+      },
+      {
+       "title": "3.2.6   页框回收",
+       "page": 233,
+       "children": []
+      },
+      {
+       "title": "3.2.7   内存映射文件",
+       "page": 234,
+       "children": []
+      },
+      {
+       "title": "3.2.8   虚拟存储器性能影响因素",
+       "page": 235,
+       "children": []
+      },
+      {
+       "title": "3.2.9   地址翻译",
+       "page": 235,
+       "children": []
+      },
+      {
+       "title": "3.2.10   本节小结",
+       "page": 237,
+       "children": []
+      },
+      {
+       "title": "3.2.11   本节习题精选",
+       "page": 238,
+       "children": []
+      },
+      {
+       "title": "3.2.12   答案与解析",
+       "page": 249,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "3.3   本章疑难点",
+     "page": 262,
+     "children": []
+    }
+   ]
+  },
+  {
+   "title": "第4章   文件管理",
+   "page": 263,
+   "children": [
+    {
+     "title": "4.1   文件系统基础",
+     "page": 263,
+     "children": [
+      {
+       "title": "4.1.1   文件的基本概念",
+       "page": 263,
+       "children": []
+      },
+      {
+       "title": "4.1.2   文件控制块和索引节点",
+       "page": 265,
+       "children": []
+      },
+      {
+       "title": "4.1.3   文件的操作",
+       "page": 266,
+       "children": []
+      },
+      {
+       "title": "4.1.4   文件的逻辑结构",
+       "page": 268,
+       "children": []
+      },
+      {
+       "title": "4.1.5   文件的物理结构",
+       "page": 270,
+       "children": []
+      },
+      {
+       "title": "4.1.6   文件保护",
+       "page": 274,
+       "children": []
+      },
+      {
+       "title": "4.1.7   本节小结",
+       "page": 276,
+       "children": []
+      },
+      {
+       "title": "4.1.8   本节习题精选",
+       "page": 276,
+       "children": []
+      },
+      {
+       "title": "4.1.9   答案与解析",
+       "page": 283,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "4.2   目录",
+     "page": 293,
+     "children": [
+      {
+       "title": "4.2.1   目录的基本概念",
+       "page": 293,
+       "children": []
+      },
+      {
+       "title": "4.2.2   目录的操作",
+       "page": 293,
+       "children": []
+      },
+      {
+       "title": "4.2.3   目录结构",
+       "page": 293,
+       "children": []
+      },
+      {
+       "title": "*4.2.4   目录实现",
+       "page": 295,
+       "children": []
+      },
+      {
+       "title": "4.2.5   文件共享",
+       "page": 296,
+       "children": []
+      },
+      {
+       "title": "4.2.6   本节小结",
+       "page": 298,
+       "children": []
+      },
+      {
+       "title": "4.2.7   本节习题精选",
+       "page": 298,
+       "children": []
+      },
+      {
+       "title": "4.2.8   答案与解析",
+       "page": 302,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "4.3   文件系统",
+     "page": 305,
+     "children": [
+      {
+       "title": "4.3.1   文件系统结构",
+       "page": 305,
+       "children": []
+      },
+      {
+       "title": "4.3.2   文件系统布局",
+       "page": 306,
+       "children": []
+      },
+      {
+       "title": "4.3.3   文件存储空间管理",
+       "page": 307,
+       "children": []
+      },
+      {
+       "title": "4.3.4   虚拟文件系统",
+       "page": 310,
+       "children": []
+      },
+      {
+       "title": "4.3.5   文件系统挂载",
+       "page": 311,
+       "children": []
+      },
+      {
+       "title": "4.3.6   本节小结",
+       "page": 312,
+       "children": []
+      },
+      {
+       "title": "4.3.7   本节习题精选",
+       "page": 312,
+       "children": []
+      },
+      {
+       "title": "4.3.8   答案与解析",
+       "page": 314,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "4.4   本章疑难点",
+     "page": 316,
+     "children": []
+    }
+   ]
+  },
+  {
+   "title": "第5章   输入/输出管理",
+   "page": 317,
+   "children": [
+    {
+     "title": "5.1   I/O管理概述",
+     "page": 317,
+     "children": [
+      {
+       "title": "5.1.1   I/O设备",
+       "page": 317,
+       "children": []
+      },
+      {
+       "title": "5.1.2   I/O控制方式",
+       "page": 320,
+       "children": []
+      },
+      {
+       "title": "5.1.3   I/O软件层次结构",
+       "page": 322,
+       "children": []
+      },
+      {
+       "title": "5.1.4   应用程序I/O接口",
+       "page": 324,
+       "children": []
+      },
+      {
+       "title": "5.1.5   本节小结",
+       "page": 325,
+       "children": []
+      },
+      {
+       "title": "5.1.6   本节习题精选",
+       "page": 325,
+       "children": []
+      },
+      {
+       "title": "5.1.7   答案与解析",
+       "page": 328,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "5.2   设备独立性软件",
+     "page": 330,
+     "children": [
+      {
+       "title": "5.2.1   设备独立性软件",
+       "page": 331,
+       "children": []
+      },
+      {
+       "title": "5.2.2   高速缓存与缓冲区",
+       "page": 331,
+       "children": []
+      },
+      {
+       "title": "5.2.3   设备分配与回收",
+       "page": 334,
+       "children": []
+      },
+      {
+       "title": "5.2.4   SPOOLing技术（假脱机技术）",
+       "page": 337,
+       "children": []
+      },
+      {
+       "title": "5.2.5   设备驱动程序接口",
+       "page": 338,
+       "children": []
+      },
+      {
+       "title": "5.2.6   I/O操作举例",
+       "page": 338,
+       "children": []
+      },
+      {
+       "title": "5.2.7   本节小结",
+       "page": 340,
+       "children": []
+      },
+      {
+       "title": "5.2.8   本节习题精选",
+       "page": 340,
+       "children": []
+      },
+      {
+       "title": "5.2.9   答案与解析",
+       "page": 345,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "5.3   磁盘和固态硬盘",
+     "page": 351,
+     "children": [
+      {
+       "title": "5.3.1   磁盘",
+       "page": 351,
+       "children": []
+      },
+      {
+       "title": "5.3.2   磁盘的管理",
+       "page": 352,
+       "children": []
+      },
+      {
+       "title": "5.3.3   磁盘调度算法",
+       "page": 353,
+       "children": []
+      },
+      {
+       "title": "5.3.4   固态硬盘",
+       "page": 357,
+       "children": []
+      },
+      {
+       "title": "5.3.5   本节小结",
+       "page": 358,
+       "children": []
+      },
+      {
+       "title": "5.3.6   本节习题精选",
+       "page": 359,
+       "children": []
+      },
+      {
+       "title": "5.3.7   答案与解析",
+       "page": 363,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "5.4   本章疑难点",
+     "page": 370,
+     "children": []
+    }
+   ]
+  },
+  {
+   "title": "参考文献",
+   "page": 371,
+   "children": []
+  }
+ ]
+}

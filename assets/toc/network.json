@@ -1,0 +1,1033 @@
+{
+ "subject": "network",
+ "label": "计算机网络",
+ "book": "王道《计算机网络》",
+ "pageCount": 312,
+ "items": [
+  {
+   "title": "扉页",
+   "page": 1,
+   "children": []
+  },
+  {
+   "title": "版权页",
+   "page": 2,
+   "children": []
+  },
+  {
+   "title": "本书配套资源介绍",
+   "page": 3,
+   "children": []
+  },
+  {
+   "title": "前 言",
+   "page": 4,
+   "children": []
+  },
+  {
+   "title": "致 读 者",
+   "page": 5,
+   "children": []
+  },
+  {
+   "title": "王道训练营",
+   "page": 6,
+   "children": []
+  },
+  {
+   "title": "目 录",
+   "page": 8,
+   "children": []
+  },
+  {
+   "title": "第1章 计算机网络体系结构",
+   "page": 13,
+   "children": [
+    {
+     "title": "1.1 计算机网络概述",
+     "page": 13,
+     "children": [
+      {
+       "title": "1.1.1 计算机网络的概念",
+       "page": 13,
+       "children": []
+      },
+      {
+       "title": "1.1.2 计算机网络的组成",
+       "page": 13,
+       "children": []
+      },
+      {
+       "title": "1.1.3 计算机网络的功能",
+       "page": 14,
+       "children": []
+      },
+      {
+       "title": "1.1.4 电路交换、报文交换与分组交换",
+       "page": 15,
+       "children": []
+      },
+      {
+       "title": "1.1.5 计算机网络的分类",
+       "page": 17,
+       "children": []
+      },
+      {
+       "title": "1.1.6 计算机网络的性能指标",
+       "page": 18,
+       "children": []
+      },
+      {
+       "title": "1.1.7 本节习题精选",
+       "page": 19,
+       "children": []
+      },
+      {
+       "title": "1.1.8 答案与解析",
+       "page": 22,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "1.2 计算机网络体系结构与参考模型",
+     "page": 26,
+     "children": [
+      {
+       "title": "1.2.1 计算机网络分层结构",
+       "page": 26,
+       "children": []
+      },
+      {
+       "title": "1.2.2 计算机网络协议、接口、服务的概念",
+       "page": 27,
+       "children": []
+      },
+      {
+       "title": "1.2.3 ISO/OSI参考模型和TCP/IP模型",
+       "page": 28,
+       "children": []
+      },
+      {
+       "title": "1.2.4 本节习题精选",
+       "page": 33,
+       "children": []
+      },
+      {
+       "title": "1.2.5 答案与解析",
+       "page": 37,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "1.3 本章小结及疑难点",
+     "page": 40,
+     "children": []
+    }
+   ]
+  },
+  {
+   "title": "第2章 数据链路层",
+   "page": 42,
+   "children": [
+    {
+     "title": "2.1 通信基础",
+     "page": 42,
+     "children": [
+      {
+       "title": "2.1.1 基本概念",
+       "page": 42,
+       "children": []
+      },
+      {
+       "title": "2.1.2 信道的极限容量",
+       "page": 43,
+       "children": []
+      },
+      {
+       "title": "2.1.3 编码与调制",
+       "page": 45,
+       "children": []
+      },
+      {
+       "title": "2.1.4 本节习题精选",
+       "page": 47,
+       "children": []
+      },
+      {
+       "title": "2.1.5 答案与解析",
+       "page": 50,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "2.2 传输介质",
+     "page": 53,
+     "children": [
+      {
+       "title": "2.2.1 双绞线、同轴电缆、光纤与无线传输介质",
+       "page": 53,
+       "children": []
+      },
+      {
+       "title": "2.2.2 物理层接口的特性",
+       "page": 56,
+       "children": []
+      },
+      {
+       "title": "2.2.3 本节习题精选",
+       "page": 56,
+       "children": []
+      },
+      {
+       "title": "2.2.4 答案与解析",
+       "page": 57,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "2.3 物理层设备",
+     "page": 58,
+     "children": [
+      {
+       "title": "2.3.1 中继器",
+       "page": 58,
+       "children": []
+      },
+      {
+       "title": "2.3.2 集线器",
+       "page": 58,
+       "children": []
+      },
+      {
+       "title": "2.3.3 本节习题精选",
+       "page": 59,
+       "children": []
+      },
+      {
+       "title": "2.3.4 答案与解析",
+       "page": 60,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "2.4 本章小结及疑难点",
+     "page": 61,
+     "children": []
+    }
+   ]
+  },
+  {
+   "title": "第3章 数据链路层",
+   "page": 63,
+   "children": [
+    {
+     "title": "3.1 数据链路层的功能",
+     "page": 63,
+     "children": [
+      {
+       "title": "3.1.1 数据链路层所处的地位",
+       "page": 64,
+       "children": []
+      },
+      {
+       "title": "3.1.2 链路管理",
+       "page": 65,
+       "children": []
+      },
+      {
+       "title": "3.1.3 封装成帧与透明传输",
+       "page": 65,
+       "children": []
+      },
+      {
+       "title": "3.1.4 流量控制",
+       "page": 65,
+       "children": []
+      },
+      {
+       "title": "3.1.5 差错检测",
+       "page": 65,
+       "children": []
+      },
+      {
+       "title": "3.1.6 本节习题精选",
+       "page": 66,
+       "children": []
+      },
+      {
+       "title": "3.1.7 答案与解析",
+       "page": 66,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "3.2 组帧",
+     "page": 67,
+     "children": [
+      {
+       "title": "3.2.1 字符计数法",
+       "page": 67,
+       "children": []
+      },
+      {
+       "title": "3.2.2 字节填充法",
+       "page": 67,
+       "children": []
+      },
+      {
+       "title": "3.2.3 零比特填充法",
+       "page": 68,
+       "children": []
+      },
+      {
+       "title": "3.2.4 违规编码法",
+       "page": 68,
+       "children": []
+      },
+      {
+       "title": "3.2.5 本节习题精选",
+       "page": 68,
+       "children": []
+      },
+      {
+       "title": "3.2.6 答案与解析",
+       "page": 69,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "3.3 差错控制",
+     "page": 69,
+     "children": [
+      {
+       "title": "3.3.1 检错编码",
+       "page": 70,
+       "children": []
+      },
+      {
+       "title": "3.3.2 纠错编码",
+       "page": 71,
+       "children": []
+      },
+      {
+       "title": "3.3.3 本节习题精选",
+       "page": 72,
+       "children": []
+      },
+      {
+       "title": "3.3.4 答案与解析",
+       "page": 73,
+       "children": []
+      },
+      {
+       "title": "3.4 流量控制与可靠传输机制",
+       "page": 74,
+       "children": [
+        {
+         "title": "3.4.1 流量控制与滑动窗口机制",
+         "page": 74,
+         "children": []
+        },
+        {
+         "title": "3.4.2 可靠传输机制",
+         "page": 76,
+         "children": []
+        },
+        {
+         "title": "3.4.3 本节习题精选",
+         "page": 80,
+         "children": []
+        },
+        {
+         "title": "3.4.4 答案与解析",
+         "page": 84,
+         "children": []
+        }
+       ]
+      },
+      {
+       "title": "3.5 介质访问控制",
+       "page": 90,
+       "children": [
+        {
+         "title": "3.5.1 信道划分介质访问控制",
+         "page": 90,
+         "children": []
+        },
+        {
+         "title": "3.5.2 随机访问介质访问控制",
+         "page": 93,
+         "children": []
+        },
+        {
+         "title": "3.5.3 轮询访问：令牌传递协议",
+         "page": 99,
+         "children": []
+        },
+        {
+         "title": "3.5.4 本节习题精选",
+         "page": 100,
+         "children": []
+        },
+        {
+         "title": "3.5.5 答案与解析",
+         "page": 105,
+         "children": []
+        }
+       ]
+      },
+      {
+       "title": "3.6 局域网",
+       "page": 111,
+       "children": [
+        {
+         "title": "3.6.1 局域网的基本概念和体系结构",
+         "page": 111,
+         "children": []
+        },
+        {
+         "title": "3.6.2 以太网与 IEEE 802.3",
+         "page": 112,
+         "children": []
+        },
+        {
+         "title": "3.6.3 IEEE 802.11 无线局域网",
+         "page": 115,
+         "children": []
+        },
+        {
+         "title": "3.6.4 VLAN 基本概念与基本原理",
+         "page": 118,
+         "children": []
+        },
+        {
+         "title": "3.6.5 本节习题精选",
+         "page": 120,
+         "children": []
+        },
+        {
+         "title": "3.6.6 答案与解析",
+         "page": 122,
+         "children": []
+        }
+       ]
+      },
+      {
+       "title": "3.7 广域网",
+       "page": 125,
+       "children": [
+        {
+         "title": "3.7.1 广域网的基本概念",
+         "page": 125,
+         "children": []
+        },
+        {
+         "title": "3.7.2 点对点协议",
+         "page": 126,
+         "children": []
+        },
+        {
+         "title": "3.7.3 本节习题精选",
+         "page": 127,
+         "children": []
+        },
+        {
+         "title": "3.7.4 答案与解析",
+         "page": 128,
+         "children": []
+        }
+       ]
+      },
+      {
+       "title": "3.8 数据链路层设备",
+       "page": 129,
+       "children": [
+        {
+         "title": "*3.8.1 网桥的基本概念",
+         "page": 129,
+         "children": []
+        },
+        {
+         "title": "3.8.2 以太网交换机",
+         "page": 130,
+         "children": []
+        },
+        {
+         "title": "3.8.3 本节习题精选",
+         "page": 132,
+         "children": []
+        },
+        {
+         "title": "3.8.4 答案与解析",
+         "page": 134,
+         "children": []
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "3.9 本章小结及疑难点",
+     "page": 136,
+     "children": []
+    }
+   ]
+  },
+  {
+   "title": "第4章 网络层",
+   "page": 138,
+   "children": [
+    {
+     "title": "4.1 网络层的功能",
+     "page": 138,
+     "children": [
+      {
+       "title": "4.1.1 异构网络互连",
+       "page": 139,
+       "children": []
+      },
+      {
+       "title": "4.1.2 路由与转发",
+       "page": 139,
+       "children": []
+      },
+      {
+       "title": "4.1.3 网络层提供的两种服务",
+       "page": 140,
+       "children": []
+      },
+      {
+       "title": "4.1.4 SDN 的基本概念",
+       "page": 142,
+       "children": []
+      },
+      {
+       "title": "4.1.5 拥塞控制",
+       "page": 143,
+       "children": []
+      },
+      {
+       "title": "4.1.6 本节习题精选",
+       "page": 144,
+       "children": []
+      },
+      {
+       "title": "4.1.7 答案与解析",
+       "page": 146,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "4.2 IPv4",
+     "page": 148,
+     "children": [
+      {
+       "title": "4.2.1 IPv4 分组",
+       "page": 148,
+       "children": []
+      },
+      {
+       "title": "4.2.2 IPv4 地址与 NAT",
+       "page": 151,
+       "children": []
+      },
+      {
+       "title": "4.2.3 划分子网与路由聚合",
+       "page": 153,
+       "children": []
+      },
+      {
+       "title": "4.2.4 网络层转发分组的过程",
+       "page": 157,
+       "children": []
+      },
+      {
+       "title": "4.2.5 地址解析协议",
+       "page": 158,
+       "children": []
+      },
+      {
+       "title": "4.2.6 动态主机配置协议 DHCP",
+       "page": 160,
+       "children": []
+      },
+      {
+       "title": "4.2.7 网际控制报文协议 ICMP",
+       "page": 161,
+       "children": []
+      },
+      {
+       "title": "4.2.8 本节习题精选",
+       "page": 162,
+       "children": []
+      },
+      {
+       "title": "4.2.9 答案与解析",
+       "page": 175,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "4.3 IPv6",
+     "page": 190,
+     "children": [
+      {
+       "title": "4.3.1 IPv6 的特点",
+       "page": 190,
+       "children": []
+      },
+      {
+       "title": "4.3.2 IPv6 数据报的基本首部",
+       "page": 191,
+       "children": []
+      },
+      {
+       "title": "4.3.3 IPv6 地址",
+       "page": 192,
+       "children": []
+      },
+      {
+       "title": "4.3.4 从 IPv4 向 IPv6 过渡",
+       "page": 193,
+       "children": []
+      },
+      {
+       "title": "4.3.5 本节习题精选",
+       "page": 193,
+       "children": []
+      },
+      {
+       "title": "4.3.6 答案与解析",
+       "page": 194,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "4.4 路由算法与路由协议",
+     "page": 195,
+     "children": [
+      {
+       "title": "4.4.1 路由算法",
+       "page": 195,
+       "children": []
+      },
+      {
+       "title": "4.4.2 分层次的路由选择协议",
+       "page": 197,
+       "children": []
+      },
+      {
+       "title": "4.4.3 路由信息协议",
+       "page": 198,
+       "children": []
+      },
+      {
+       "title": "4.4.4 开放最短路径优先协议",
+       "page": 200,
+       "children": []
+      },
+      {
+       "title": "4.4.5 边界网关协议",
+       "page": 202,
+       "children": []
+      },
+      {
+       "title": "4.4.6 本节习题精选",
+       "page": 205,
+       "children": []
+      },
+      {
+       "title": "4.4.7 答案与解析",
+       "page": 211,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "4.5 IP 多播",
+     "page": 217,
+     "children": [
+      {
+       "title": "4.5.1 多播的概念",
+       "page": 217,
+       "children": []
+      },
+      {
+       "title": "4.5.2 IP 多播地址",
+       "page": 218,
+       "children": []
+      },
+      {
+       "title": "4.5.3 在局域网上进行硬件多播",
+       "page": 218,
+       "children": []
+      },
+      {
+       "title": "4.5.4 IGMP 与多播路由协议",
+       "page": 219,
+       "children": []
+      },
+      {
+       "title": "4.5.5 本节习题精选",
+       "page": 219,
+       "children": []
+      },
+      {
+       "title": "4.5.6 答案与解析",
+       "page": 220,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "4.6 移动 IP",
+     "page": 220,
+     "children": [
+      {
+       "title": "4.6.1 移动 IP 的概念",
+       "page": 220,
+       "children": []
+      },
+      {
+       "title": "4.6.2 移动 IP 通信过程",
+       "page": 221,
+       "children": []
+      },
+      {
+       "title": "4.6.3 本节习题精选",
+       "page": 222,
+       "children": []
+      },
+      {
+       "title": "4.6.4 答案与解析",
+       "page": 222,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "4.7 网络层设备",
+     "page": 223,
+     "children": [
+      {
+       "title": "4.7.1 冲突域和广播域",
+       "page": 223,
+       "children": []
+      },
+      {
+       "title": "4.7.2 路由器的组成和功能",
+       "page": 223,
+       "children": []
+      },
+      {
+       "title": "4.7.3 路由表与分组转发",
+       "page": 224,
+       "children": []
+      },
+      {
+       "title": "4.7.4 本节习题精选",
+       "page": 225,
+       "children": []
+      },
+      {
+       "title": "4.7.5 答案与解析",
+       "page": 228,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "4.8 本章小结及疑难点",
+     "page": 232,
+     "children": []
+    }
+   ]
+  },
+  {
+   "title": "第5章 传输层",
+   "page": 233,
+   "children": [
+    {
+     "title": "5.1 传输层提供的服务",
+     "page": 233,
+     "children": [
+      {
+       "title": "5.1.1 传输层的功能",
+       "page": 233,
+       "children": []
+      },
+      {
+       "title": "5.1.2 传输层的寻址与端口",
+       "page": 234,
+       "children": []
+      },
+      {
+       "title": "5.1.3 无连接服务与面向连接服务",
+       "page": 235,
+       "children": []
+      },
+      {
+       "title": "5.1.4 本节习题精选",
+       "page": 236,
+       "children": []
+      },
+      {
+       "title": "5.1.5 答案与解析",
+       "page": 237,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "5.2 UDP",
+     "page": 238,
+     "children": [
+      {
+       "title": "5.2.1 UDP 数据报",
+       "page": 238,
+       "children": []
+      },
+      {
+       "title": "5.2.2 UDP 检验",
+       "page": 239,
+       "children": []
+      },
+      {
+       "title": "5.2.3 本节习题精选",
+       "page": 240,
+       "children": []
+      },
+      {
+       "title": "5.2.4 答案与解析",
+       "page": 242,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "5.3 TCP",
+     "page": 245,
+     "children": [
+      {
+       "title": "5.3.1 TCP 的特点",
+       "page": 245,
+       "children": []
+      },
+      {
+       "title": "5.3.2 TCP 报文段",
+       "page": 245,
+       "children": []
+      },
+      {
+       "title": "5.3.3 TCP 连接管理",
+       "page": 247,
+       "children": []
+      },
+      {
+       "title": "5.3.4 TCP 可靠传输",
+       "page": 249,
+       "children": []
+      },
+      {
+       "title": "5.3.5 TCP 流量控制",
+       "page": 250,
+       "children": []
+      },
+      {
+       "title": "5.3.6 TCP 拥塞控制",
+       "page": 251,
+       "children": []
+      },
+      {
+       "title": "5.3.7 本节习题精选",
+       "page": 254,
+       "children": []
+      },
+      {
+       "title": "5.3.8 答案与解析",
+       "page": 264,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "5.4 本章小结及疑难点",
+     "page": 273,
+     "children": []
+    }
+   ]
+  },
+  {
+   "title": "第6章 应用层",
+   "page": 275,
+   "children": [
+    {
+     "title": "6.1 网络应用模型",
+     "page": 275,
+     "children": [
+      {
+       "title": "6.1.1 客户/服务器模型",
+       "page": 275,
+       "children": []
+      },
+      {
+       "title": "6.1.2 P2P 模型",
+       "page": 276,
+       "children": []
+      },
+      {
+       "title": "6.1.3 本节习题精选",
+       "page": 276,
+       "children": []
+      },
+      {
+       "title": "6.1.4 答案与解析",
+       "page": 277,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "6.2 域名系统",
+     "page": 278,
+     "children": [
+      {
+       "title": "6.2.1 层次域名空间",
+       "page": 278,
+       "children": []
+      },
+      {
+       "title": "6.2.2 域名服务器",
+       "page": 279,
+       "children": []
+      },
+      {
+       "title": "6.2.3 域名解析过程",
+       "page": 280,
+       "children": []
+      },
+      {
+       "title": "6.2.4 本节习题精选",
+       "page": 281,
+       "children": []
+      },
+      {
+       "title": "6.2.5 答案与解析",
+       "page": 283,
+       "children": [
+        {
+         "title": "二、综合应用题",
+         "page": 285,
+         "children": []
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "6.3 文件传输协议",
+     "page": 285,
+     "children": [
+      {
+       "title": "6.3.1 FTP 的工作原理",
+       "page": 285,
+       "children": []
+      },
+      {
+       "title": "6.3.2 控制连接与数据连接",
+       "page": 286,
+       "children": []
+      },
+      {
+       "title": "6.3.3 本节习题精选",
+       "page": 287,
+       "children": []
+      },
+      {
+       "title": "6.3.4 答案与解析",
+       "page": 289,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "6.4 电子邮件",
+     "page": 291,
+     "children": [
+      {
+       "title": "6.4.1 电子邮件系统的组成结构",
+       "page": 291,
+       "children": []
+      },
+      {
+       "title": "6.4.2 电子邮件格式与 MIME",
+       "page": 292,
+       "children": []
+      },
+      {
+       "title": "6.4.3 SMTP 和 POP3",
+       "page": 293,
+       "children": []
+      },
+      {
+       "title": "6.4.4 本节习题精选",
+       "page": 294,
+       "children": []
+      },
+      {
+       "title": "6.4.5 答案与解析",
+       "page": 296,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "6.5 万维网",
+     "page": 297,
+     "children": [
+      {
+       "title": "6.5.1 WWW 的概念与组成结构",
+       "page": 297,
+       "children": []
+      },
+      {
+       "title": "6.5.2 超文本传输协议",
+       "page": 298,
+       "children": []
+      },
+      {
+       "title": "6.5.3 本节习题精选",
+       "page": 302,
+       "children": []
+      },
+      {
+       "title": "6.5.4 答案与解析",
+       "page": 306,
+       "children": []
+      }
+     ]
+    },
+    {
+     "title": "6.6 本章小结及疑难点",
+     "page": 311,
+     "children": []
+    }
+   ]
+  },
+  {
+   "title": "参考文献",
+   "page": 312,
+   "children": []
+  }
+ ]
+}
